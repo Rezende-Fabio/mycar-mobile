@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ButtonFooter extends StatelessWidget {
   final String text;
-  const ButtonFooter(this.text, {super.key});
+  final String page;
+  const ButtonFooter(this.text, this.page, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,9 @@ class ButtonFooter extends StatelessWidget {
       width: double.infinity,
       height: 70,
       child: ElevatedButton(
-        onPressed: () => {},
+        onPressed: () => {
+          Navigator.of(context).pushNamed(page)
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Color.fromARGB(255, 210, 0, 0),
           shape: RoundedRectangleBorder(

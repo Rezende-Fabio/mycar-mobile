@@ -33,9 +33,9 @@ class _StartPageState extends State<StartPage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-                    child: ButtonFooter("Entrar"),
+                    child: ButtonFooter("Entrar", "/login"),
                   ),
-                  ButtonFooter("Registar"),
+                  ButtonFooter("Registar", ""),
                 ],
               ),
             ],
