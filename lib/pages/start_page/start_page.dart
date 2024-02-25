@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mycar_mobile/widgets/buttons/button_footer.dart';
 
-class Start extends StatefulWidget {
-  const Start({super.key});
+class StartPage extends StatefulWidget {
+  const StartPage({super.key});
 
   @override
-  State<Start> createState() => _StartState();
+  State<StartPage> createState() => _StartPageState();
 }
 
-class _StartState extends State<Start> {
+class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,9 +33,9 @@ class _StartState extends State<Start> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-                    child: ButtonFooter("Entrar"),
+                    child: ButtonFooter("Entrar", "/login"),
                   ),
-                  ButtonFooter("Registar"),
+                  ButtonFooter("Registar", ""),
                 ],
               ),
             ],
