@@ -55,15 +55,6 @@ class _FormLoginState extends State<FormLogin> with ValidationsMixin {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 12, right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text("Esqueceu a senha?"),
-                ],
-              ),
-            )
           ],
         ),
       ),

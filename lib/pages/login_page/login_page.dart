@@ -21,49 +21,78 @@ class _LoginPageState extends State<LoginPage> {
         width: double.infinity,
         height: double.infinity,
         color: Color.fromARGB(255, 54, 54, 54),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Center(
-              child: SizedBox(
-                width: 120,
-                child: Image.asset("assets/img/Logo.png"),
-              ),
-            ),
-            Center(
-              child: Container(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height * 0.65,
                 width: double.infinity,
-                child: const Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Entrar",
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 35,
+                margin: EdgeInsets.only(right: 12, left: 12),
+                child: Card(
+                  elevation: 15,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Center(
+                        child: Container(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          width: double.infinity,
+                          child: const Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Login",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 35,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Entre com o seu E-mail e senha",
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 132, 132, 132),
+                                        fontSize: 18),
+                                  )
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                        Text(
-                          "Entre com o seu E-mail e senha",
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 181, 181, 181),
-                              fontSize: 18),
-                        )
-                      ],
-                    ),
-                  ],
+                      ),
+                      Center(
+                        child: FormLogin(
+                          _controllerEmail,
+                          _controllerSenha,
+                          _formKey,
+                        ),
+                      ),
+                      ButtonFooter("Entrar", ""),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Esqueceu a senha?"),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Center(
-              child: FormLogin(_controllerEmail, _controllerSenha, _formKey),
-            ),
-            ButtonFooter("Entrar", ""),
-          ],
+              Container(
+                margin: EdgeInsets.only(
+                    bottom: MediaQuery.of(context).size.height * 0.68),
+                child: Center(
+                  child: SizedBox(
+                    width: 200,
+                    child: Image.asset("assets/img/Logo.png"),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
