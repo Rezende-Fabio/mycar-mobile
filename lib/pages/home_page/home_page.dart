@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mycar_mobile/widgets/slide_menu.dart';
+import 'package:mycar_mobile/widgets/slide_menu/slide_menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

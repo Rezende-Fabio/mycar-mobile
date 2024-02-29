@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mycar_mobile/widgets/cards/info_card_menu.dart';
-import 'package:mycar_mobile/widgets/slide_menu_item.dart';
+import 'package:mycar_mobile/widgets/slide_menu/slide_menu_item.dart';
 
 class SlideMenu extends StatefulWidget {
   const SlideMenu({super.key});
