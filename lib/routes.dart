@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mycar_mobile/pages/home_page/home_page.dart';
 import 'package:mycar_mobile/pages/login_page/login_page.dart';
 import 'package:mycar_mobile/pages/start_page/start_page.dart';
 
 class RouteGenerator {
   static const String startPage = '/';
   static const String loginPage = '/login';
+  static const String homePage = "/home";
 
   RouteGenerator._();
 
@@ -17,6 +19,10 @@ class RouteGenerator {
       case loginPage:
         return MaterialPageRoute(
           builder: (_) => const LoginPage(),
+        );
+      case homePage:
+        return MaterialPageRoute(
+          builder: (_) => const HomePage(),
         );
       default:
         throw const FormatException("Rota não encontrada");
