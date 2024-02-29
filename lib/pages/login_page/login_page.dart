@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                           _formKey,
                         ),
                       ),
-                      ButtonFooter("Entrar", ""),
+                      ButtonFooter("Entrar", "/home"),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
