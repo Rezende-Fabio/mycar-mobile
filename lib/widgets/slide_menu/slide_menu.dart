@@ -15,15 +15,18 @@ class _SlideMenuState extends State<SlideMenu> {
     return Container(
       width: MediaQuery.of(context).size.width * 0.67,
       height: double.infinity,
-      color: Colors.red,
+      color: Color.fromARGB(255, 210, 0, 0),
       child: Column(
         children: [
           InfoCard(
             nome: "José Alfonso",
           ),
-          Text(
-            "Procurar",
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(color:Colors.white),
+          Padding(
+            padding: const EdgeInsets.only(top: 30, bottom: 15),
+            child: Text(
+              "Procurar",
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(color:Colors.white),
+            ),
           ),
           SlideMenuItem()
         ],
