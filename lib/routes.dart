@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mycar_mobile/pages/home_page/home_page.dart';
 import 'package:mycar_mobile/pages/login_page/login_page.dart';
 import 'package:mycar_mobile/pages/start_page/start_page.dart';
+import 'package:mycar_mobile/widgets/slide_menu/slide_menu.dart';
 
 class RouteGenerator {
   static const String startPage = '/';
@@ -22,7 +23,7 @@ class RouteGenerator {
         );
       case homePage:
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
+          builder: (_) => const SlideMenu(),
         );
       default:
         throw const FormatException("Rota não encontrada");
