@@ -5,3 +5,9 @@ const styleTitle = TextStyle(
   fontSize: 23,
   fontWeight: FontWeight.bold,
 );
+
+const styleSubTitle = TextStyle(
+  color: Colors.white,
+  fontSize: 20,
+  fontWeight: FontWeight.w400,
+);
