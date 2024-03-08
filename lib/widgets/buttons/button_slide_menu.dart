@@ -39,9 +39,11 @@ class _ButtonSlideMenuState extends State<ButtonSlideMenu>
           }
         },
         child: CircleAvatar(
+          backgroundColor: isPlay ? const Color.fromARGB(255, 54, 54, 54) : const Color.fromARGB(255, 210, 0, 0),
           child: AnimatedIcon(
             progress: _animationController,
             icon: AnimatedIcons.menu_close,
+            color: Colors.white,
           ),
         ),
       ),

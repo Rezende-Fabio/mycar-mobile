@@ -51,7 +51,18 @@ class HomePage extends StatelessWidget {
                   CardCar(),
                 ],
               ),
-            )
+            ),
+            const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Manutenções",
+                    style: Style.styleSubTitle,
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
