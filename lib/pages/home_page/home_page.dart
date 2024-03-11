@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mycar_mobile/style/text_style.dart' as Style;
 import 'package:mycar_mobile/widgets/cards/car_card_home.dart';
+import 'package:mycar_mobile/widgets/cards/manut_card_home.dart';
 import 'package:mycar_mobile/widgets/chart/bar_chart_home.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 120,
+              height: MediaQuery.of(context).size.height * 0.13,
               width: double.infinity,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
             const Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.only(top: 10, bottom: 8, left: 8),
                   child: Text(
                     "Manutenções",
                     style: Style.styleSubTitle,
@@ -63,6 +64,38 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.33,
+              child: ListView(
+                children: [
+                  CardManut(
+                    title: "Troca do oleo",
+                    date: "20/02/2024",
+                    value: 150.50,
+                  ),
+                  CardManut(
+                    title: "Troca do oleo",
+                    date: "20/02/2024",
+                    value: 150.50,
+                  ),
+                  CardManut(
+                    title: "Troca do oleo",
+                    date: "20/02/2024",
+                    value: 150.50,
+                  ),
+                  CardManut(
+                    title: "Troca do oleo",
+                    date: "20/02/2024",
+                    value: 150.50,
+                  ),
+                  CardManut(
+                    title: "Troca do oleo",
+                    date: "20/02/2024",
+                    value: 150.50,
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
